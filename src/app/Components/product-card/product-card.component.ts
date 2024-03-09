@@ -10,5 +10,7 @@ import { ReviewsComponent } from '../reviews/reviews.component';
 })
 export class ProductCardComponent {
   rating!:number
+  imgSrc!:string
+
 
 }
