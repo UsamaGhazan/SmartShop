@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './reviews.component.css'
 })
 export class ReviewsComponent {
-  @Input() rating!:number
+  @Input() value!:number
+  
 
 }

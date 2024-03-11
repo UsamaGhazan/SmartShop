@@ -1,6 +1,13 @@
 
 <div class="flex *ngIf=">
-    <i class="fas fa-star" *ngIf="rating>=1"></i>
+    <i class="fas" [ngClass]="{' fa-star-half-alt':value<1,'fas fa-star':value>=1 }" *ngIf="value>0"></i>
+    <i class="fas" [ngClass]="{' fa-star-half-alt':value<=1.5,' fa-star':value>=2 }" *ngIf="value>1"></i>
+    <i class="fas" [ngClass]="{' fa-star-half-alt':value<=2.5,' fa-star':value>=3 }" *ngIf="value>2"></i>
+    <i class="fas" [ngClass]="{' fa-star-half-alt':value<=3.5,' fa-star':value>=4 }" *ngIf="value>3"></i>
+    <i class="fas" [ngClass]="{' fa-star-half-alt':value<=4.5,' fa-star':value>=5 }" *ngIf="value>4"></i>
+
+    
+    
 
     
 
