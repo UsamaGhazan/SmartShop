@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.counter h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.counter button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+}
