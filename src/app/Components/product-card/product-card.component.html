@@ -1,23 +1,35 @@
-<div class="h-80 w-60 shadow-sm border-2 flex p-3">
-  <div class="flex flex-col">
-    <div class=" ">
-      <img src="../../assets/images/camera.jpg" alt="" class="h-40 w-60" />
-    </div>
-    <div class="p-2 ">
-    <h1 class=" font-bold underline">Canon Camera 360</h1>
+<div *ngIf="products$" class="products">
 
-    <div class="flex gap-1 mt-2 ">
-      <div class="mt-1">
-        <app-reviews [value]="3.5"/>
+<ul class="products-list">
+  @for (item of (products$|async); track $index) {
+    <li >
+  <div class="h-80 w-60 shadow-sm border-2 flex p-3">
+    <div class="flex flex-col">
+      <div class=" ">
+        <img src={{item.image}} alt="" class="h-40 w-60" />
       </div>
-
-      <div class="text-lg"> 10 Reviews</div>
-
-    </div>
-
-    <div class="font-semibold text-lg mt-2">
-       $100.99
-    </div>
+      <div class="p-2 ">
+      <h1 class=" font-bold underline">{{item.title}}</h1>
+  
+      <div class="flex gap-1 mt-2 ">
+        <div class="mt-1">
+          <app-reviews [value]="3.5"/>
+        </div>
+  
+        <div class="text-lg"> 10 Reviews</div>
+  
+      </div>
+  
+      <div class="font-semibold text-lg mt-2">
+         ${{item.price}}
+      </div>
+      </div>
     </div>
   </div>
+  </li>
+
+
+
+  }
+</ul>
 </div>
