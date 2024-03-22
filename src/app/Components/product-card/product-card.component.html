@@ -3,7 +3,7 @@
 <ul class="products-list">
   @for (item of (products$|async); track $index) {
     <li >
-  <div class="h-80 w-60 shadow-sm border-2 flex p-3">
+  <div class="h-100 w-60 shadow-sm border-2 flex p-3">
     <div class="flex flex-col">
       <div class=" ">
         <img src={{item.image}} alt="" class="h-40 w-60" />
@@ -21,8 +21,17 @@
       </div>
   
       <div class="font-semibold text-lg mt-2">
-         ${{item.price}}
+         {{item.price | currency}}
       </div>
+      <button type="button"
+  class="mt=4 w-full rounded-sm bg-green-500">
+  
+  Add to cart 
+  </button>
+  <button type="button"
+  class=" w-full rounded-sm bg-red-500">
+  View product
+  </button>
       </div>
     </div>
   </div>

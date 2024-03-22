@@ -7,5 +7,5 @@
 .products .products-list{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    row-gap: 20px;
+    gap: 20px;
 }
