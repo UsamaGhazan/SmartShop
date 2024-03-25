@@ -8,7 +8,8 @@ export interface Product{
     price:number,
     countInStock:number,
     rating:5,
-    numReviews:number
+    numReviews:number,
+    quantity:number
     
 
 }
