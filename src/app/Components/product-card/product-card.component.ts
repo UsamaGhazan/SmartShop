@@ -1,3 +1,4 @@
+import { addToCart } from './../../states/cart/cart.actions';
 import { Component, OnInit, inject } from '@angular/core';
 import { ReviewsComponent } from '../reviews/reviews.component';
 import { HttpClient } from '@angular/common/http';
@@ -18,7 +19,9 @@ export class ProductCardComponent implements OnInit {
   products$=this.http.get('https://fakestoreapi.com/products') as Observable<any[]>
   rating!:number
   imgSrc!:string
-  
+  addToCart(){
+    
+  }
   ngOnInit(): void {
     // this.http.get('https://fakestoreapi.com/products').subscribe(data=>{
     //   console.log(data)
